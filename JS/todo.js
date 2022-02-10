@@ -44,11 +44,6 @@ function show() {
     html += '</ul>';
     /*this displays the task as a list*/
     document.getElementById('todos').innerHTML = html;
-}
-/*This displays the inputed task when the 'Add item' button is clicked*/
-document.getElementById('add').addEventListener('click', add);
-/*this will keep the inputs displayed permanently on the screen*/
-show();
 
 /* This tells the browser how to display the todo 
     array after an item has been removed */
@@ -56,6 +51,13 @@ show();
     for (var i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', remove);
     };
+
+}
+
+/*This displays the inputed task when the 'Add item' button is clicked*/
+document.getElementById('add').addEventListener('click', add);
+/*this will keep the inputs displayed permanently on the screen*/
+show();
 
 
 /* this creates the functionality of removing a todo item from the array */
